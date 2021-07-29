@@ -1,0 +1,7 @@
+npm start
+
+cd pango-1.38.1-1.fc23.x86_64
+LD_LIBRARY_PATH=$PWD/usr/lib64/ /usr/bin/mongodb-compass
+
+sudo service mongod start
+sudo systemctl status mongod
