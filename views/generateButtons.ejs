@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style type="text/css" media="screen">
+        body {
+            background-color: skyblue;
+            text-decoration-color: white;
+            font-size:1em;
+        }
+    </style>
+</head>
+ 
+<body>
+   <% for(var i=0; i<data.length; i++) {%>
+        
+                <b><%= data[i].name %></b>
+
+                <p>
+                    <a href="http://localhost:8081/sync?access_token=<%= data[i].token %>">
+                    <button>Connect</button>
+                <hr>
+                
+                        
+        
+<% } %>
+</body>
+ 
+</html>
