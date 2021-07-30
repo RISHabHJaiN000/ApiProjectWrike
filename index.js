@@ -18,8 +18,13 @@ const syncRoute = require('./routes/sync');
 app.use('/sync', syncRoute);
 //routes.initialize(app);
 
-
-mongoose.connect(DATABASE_URL, { useNewUrlParser: true }); 
+mongoose.set('useUnifiedTopology', true)
+mongoose.connect(process.env.DB_CONNECTION,
+    { useNewUrlParser: true },
+    () => {
+        console.log('Connected to MongoDB !');
+    });
+//mongoose.connect(DATABASE_URL, { useNewUrlParser: true }); 
 const db = mongoose.connection;
 db.on("error", error => console.log(error));
 db.once("open", () => console.log("connection to db established"));
