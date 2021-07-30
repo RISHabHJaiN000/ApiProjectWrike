@@ -95,11 +95,11 @@ app.get('/oauth/redirect', (req, res) => {
     
 
     console.log("IN");
-
+    console.log("1");
 
 
     const save={token:token,name:name};
-
+    console.log("2");
     //const express = require("express");
     //const app = express();
     //const mongoose = require("mongoose");
@@ -110,7 +110,9 @@ app.get('/oauth/redirect', (req, res) => {
     
     
     const User = require("./tokens");
+    console.log("3");
     const store=new User(save);
+    console.log("4");
 
     User.findOne({name:name}, async function(err, found){
     if(err) console.log(err);
