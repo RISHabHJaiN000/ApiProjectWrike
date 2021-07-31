@@ -1,4 +1,5 @@
 require('dotenv').config()
+console.log(process.env.DATABASE_URL);
 deployPort=process.env.PORT || 5000
 
 console.log("sync server started");
