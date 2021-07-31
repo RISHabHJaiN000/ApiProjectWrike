@@ -1,5 +1,8 @@
 require('dotenv').config()
 console.log(process.env.DATABASE_URL);
+console.log(process.env.PORT || 5000);
+console.log(process.env.DB_CONNECTION||3000);
+
 deployPort=process.env.PORT || 5000
 
 console.log("sync server started");
