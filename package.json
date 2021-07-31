@@ -16,7 +16,8 @@
     "nodemon": "^2.0.12"
   },
   "engines": {
-   "node": "10.X"
+   "node": "10.X",
+   "npm" : "6.14.4"
    },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
