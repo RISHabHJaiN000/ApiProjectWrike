@@ -3,6 +3,9 @@ const express = require('express')
 
 require('dotenv').config()
 
+const { userInfo } = require('os');
+const path = require('path');
+const session = require('express-session')
 deployPort=process.env.PORT || 5000
 
 DATABASE_URL = "mongodb://localhost/users";
@@ -21,7 +24,7 @@ app.use('/sync', syncRoute);
 //routes.initialize(app);
 
 mongoose.set('useUnifiedTopology', true)
-mongoose.connect(process.env.DB_CONNECTION,
+mongoose.connect(process.env.DB_CONNECTION||3000,
     { useNewUrlParser: true },
     () => {
         console.log('Connected to MongoDB !');
