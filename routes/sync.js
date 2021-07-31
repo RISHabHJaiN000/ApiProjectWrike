@@ -2,7 +2,7 @@ require('dotenv').config()
 console.log(process.env.DATABASE_URL);
 console.log(process.env.PORT || 5000);
 console.log(process.env.DB_CONNECTION||3000);
-console.log(process.env.MONGODB_URI);
+console.log(process.env);
 
 deployPort=process.env.PORT || 5000
 
