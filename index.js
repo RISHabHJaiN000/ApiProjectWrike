@@ -1,6 +1,8 @@
 console.log("index started");
 const express = require('express')
 
+require('dotenv').config()
+
 deployPort=process.env.PORT || 5000
 
 DATABASE_URL = "mongodb://localhost/users";
