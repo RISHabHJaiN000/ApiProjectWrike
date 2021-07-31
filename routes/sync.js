@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 deployPort=process.env.PORT || 5000
 
 console.log("sync server started");
